@@ -1,0 +1,12 @@
+{% extends "newsFeed/base.html" %}
+ 
+{% block title %}{{ post.title }}{% endblock %} 
+{% block pageName %}НОВОСТИ{% endblock %}
+
+{% block content %} 
+  <div class="h2" >{{ post.title }}</div>
+  <p class="date"> 
+    Published {{ post.publish }} by {{ post.author }} 
+  </p> 
+  {{ post.body|linebreaks }} 
+{% endblock %}
