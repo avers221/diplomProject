@@ -1,0 +1,17 @@
+{% extends "newsFeed/base.html" %}
+{% block title %}НОВОСТИ{% endblock %}
+{% block pageName %}НОВОСТИ{% endblock %}
+{% block content %}
+  {% for post in posts %}
+    <p class=" h2 ">
+      <a href="{{ post.get_absolute_url }} " style="text-decoration: none; color:black">
+        {{ post.title }}
+      </a>
+    </p>
+    <p>
+      Published {{ post.publish }} by {{ post.author }}
+    </p>
+    {{ post.body|truncatewords:50|linebreaks }}
+  {% endfor %}
+  {% include "pagination.html" with page=page_obj %}
+{% endblock %}
