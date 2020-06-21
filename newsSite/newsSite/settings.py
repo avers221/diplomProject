@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'newsFeed.apps.NewsfeedConfig',
     'crispy_forms',
     'about_company.apps.AboutCompanyConfig',
+    'contacts.apps.ContactsConfig',
+
 ]
 
 MIDDLEWARE = [
